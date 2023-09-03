@@ -23,6 +23,7 @@ import Geolocation from '@react-native-community/geolocation'
 import { useTypeSafeMutation } from "@/shared-hooks/useTypeSafeMutation";
 import { AxiosResponse } from "axios";
 import Loading from "@/shared-component/Loading";
+import { useLocationInfoState } from "@/store/useLocationState";
 
 export const IMAGE_QUALITY_VALUE = 100;
 export const MAX_NUM_PHOTOS = 20;
@@ -33,6 +34,8 @@ const CameraScreen = () => {
   const [visibleImageIndex, setVisibleImageIndex] = useState(0);
   const [scannedImages, setScannedImages] = useState<string[]>([]);
   const [locationPermissionGranted, setLocationPermissionGranted] = useState(false);
+  const { locationInfo, setLocationInfo } =
+  useLocationInfoState();
   const {
     mutate: sendLocationToServerMutation,
     isLoading: isLoading,
@@ -72,6 +75,7 @@ const CameraScreen = () => {
       async (info: any) => {
         console.log('GEOLOCATION', info)
         if (info?.coords) {
+          setLocationInfo(info?.coords);
           sendLocationToServerMutation(info.coords, {
             onSuccess: () => {
               showModal({
@@ -102,6 +106,7 @@ const CameraScreen = () => {
               latitude: data.latitude.toString(),
               longitude: data.longitude.toString()
             };
+            setLocationInfo(locationInfo);
             sendLocationToServerMutation(locationInfo, {
               onSuccess: () => {
                 showModal({

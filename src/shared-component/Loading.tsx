@@ -7,7 +7,7 @@ const Loading = () => {
   return (
     <Box style={styles.container}>
       <LottieView
-        source={require("@/assets/common/Loading.json")}
+        source={require("../assets/common/Loading.json")}
         autoPlay
         loop
         style={{
