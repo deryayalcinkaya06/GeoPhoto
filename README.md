@@ -1,26 +1,15 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
-
 # Getting Started
 
->**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
-
-## Step 1: Start the Metro Server
-
-First, you will need to start **Metro**, the JavaScript _bundler_ that ships _with_ React Native.
-
+## Start the Metro Server
 To start Metro, run the following command from the _root_ of your React Native project:
-
 ```bash
+
 # using npm
 npm start
 
 # OR using Yarn
 yarn start
 ```
-
-## Step 2: Start your Application
-
-Let Metro Bundler run in its _own_ terminal. Open a _new_ terminal from the _root_ of your React Native project. Run the following command to start your _Android_ or _iOS_ app:
 
 ### For Android
 
@@ -31,7 +20,6 @@ npm run android
 # OR using Yarn
 yarn android
 ```
-
 ### For iOS
 
 ```bash
@@ -42,38 +30,48 @@ npm run ios
 yarn ios
 ```
 
-If everything is set up _correctly_, you should see your new app running in your _Android Emulator_ or _iOS Simulator_ shortly provided you have set up your emulator/simulator correctly.
+# Libraries
 
-This is one way to run your app — you can also run it directly from within Android Studio and Xcode respectively.
+# @shopify/restyle
+The Restyle library provides a type-enforced system for building UI components in React Native with TypeScript. It's a library for building UI libraries, with themability as the core focus.
+--lib/theme.ts
 
-## Step 3: Modifying your App
+# swagger-typescript-api
 
-Now that you have successfully run the app, let's modify it.
+Generate api via swagger scheme.
+Generated api module use Fetch Api or Axios to make requests.
+--api/generated/location
 
-1. Open `App.tsx` in your text editor of choice and edit some lines.
-2. For **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Developer Menu** (<kbd>Ctrl</kbd> + <kbd>M</kbd> (on Window and Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (on macOS)) to see your changes!
+# zustand
+A small, fast and scalable bearbones state-management solution using simplified flux principles. Has a comfy API based on hooks, isn't boilerplatey or opinionated.
+--store/useLocationState
 
-   For **iOS**: Hit <kbd>Cmd ⌘</kbd> + <kbd>R</kbd> in your iOS Simulator to reload the app and see your changes!
+# axios
+Make http requests from node.js
+--api/httpClient.ts
 
-## Congratulations! :tada:
+# @tanstack/react-query
+Hooks for fetching, caching and updating asynchronous data in React.
+Mutations + Reactive Query Refetching
 
-You've successfully run and modified your React Native App. :partying_face:
+--shared-hooks/useTypeSafeMutation.ts
+--shared-hooks/useTypeSafeQuery.ts
 
-### Now what?
+# @react-native-community/geolocation
+Using @react-native-community/geolocation to get location information, request permissions and permissions control in React Native apps
+--screens/CameraScreen/index.tsx
 
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [Introduction to React Native](https://reactnative.dev/docs/getting-started).
 
-# Troubleshooting
+# Screenshot
 
-If you can't get this to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
 
-# Learn More
+![GeoPhoto-1](https://github.com/deryayalcinkaya06/GeoPhoto/assets/105358101/637ad5cf-1bbc-4c89-98d2-a4a5ad347e38)
 
-To learn more about React Native, take a look at the following resources:
+![GeoPhoto-2](https://github.com/deryayalcinkaya06/GeoPhoto/assets/105358101/957da3a4-7212-40c4-8023-518f7fda6fb4)
 
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+![GeoPhoto-3](https://github.com/deryayalcinkaya06/GeoPhoto/assets/105358101/a56f6b01-817d-4a71-9e37-63b64ad8ec1d)
+
+
+
+
+
