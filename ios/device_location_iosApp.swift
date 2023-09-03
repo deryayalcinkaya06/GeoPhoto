@@ -6,3 +6,13 @@
 //
 
 import Foundation
+import SwiftUI
+
+@main
+struct device_location_iosApp: App {
+    var body: some Scene {
+        WindowGroup {
+            ContentView()
+        }
+    }
+}
