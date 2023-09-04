@@ -34,8 +34,4 @@ export type AxiosHandlerFunction = (
   ...args: any[]
 ) => Promise<AxiosResponse<unknown>>;
 
-export type Company = {
-  name: string;
-  id: string;
-  identityTaxNumber: string;
-};
+
