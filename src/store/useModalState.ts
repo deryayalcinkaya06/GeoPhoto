@@ -38,14 +38,14 @@ export const useModalState = () => {
       } = params;
 
       if (defaultError) {
-        text = "İşlem Hatalı";
+        text = "Transaction Error";
       }
 
       setModalState((prevState) => ({
         ...prevState,
         isVisible: true,
-        text: text || "Başarılı",
-        buttonTitle: buttonTitle ||  "tamam",
+        text: text || "Success",
+        buttonTitle: buttonTitle ||  "Ok",
         onCancelPress: onCancelPress || (() => setVisibility(false)),
         showCancelButton: showCancelButton || false,
         onButtonPress:
